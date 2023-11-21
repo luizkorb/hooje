@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>cadastro</title>
+    <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+
+    <script type="text/javascript">
+
+
+        function Inserir() {
+            var dados = $('#form1').serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "inserir.php",
+                data: dados,
+                dataType: 'json',
+
+                success: function (meu_json) {
+
+                    var valores = meu_json;
+                    var resultado = valores.resultado;
+                    if (resultado == 1) {
+                        alert("Dados Gravados")
+                    }
+
+
+                },
+                error: function (xhr, status, error) {
+                    console.error('Ocorreu um erro ao enviar os dados: ' + error);
+                },
+                beforeSend: function (xhr) {
+                },
+                complete: function (xhr, status) {
+                },
+                timeout: 5000
+            });
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="../logo_pequena.png" width="150px">
+    </div>
+    <br>
+    <div class="page">
+
+        <div class="titulo">
+            Associação de Serviços Sociais Voluntários de Guaramirim
+        </div>
+
+        <div class="formLogin">
+            <form action="" method="post" id="form1">
+                CPF
+                <input type="text" name="cpf" class="tudo"> 
+                <br> 
+                E-mail
+                <input type="email" name="email" class="tudo">
+                <br> 
+                Senha
+                <input type="password" name="senha" class="tudo">
+                <br> 
+                Nome
+                <input type="text" name="nome" class="tudo">
+                <br> 
+                Telefone
+                <input type="text" name="telefone" class="tudo">
+                <br> 
+                Usuário
+                <input type="text" name="usuario" class="tudo">
+                <br> 
+
+                <input type="button" class="button" name="enviar" value="Enviar" onclick="Inserir();" />
+            </form>
+        </div>
+
+        <br>
+    </div>
+
+    <div class="logo_medica">
+        <img src="logo_medicina.png" width="40px">
+    </div>
+
+</body>
+
+</html>

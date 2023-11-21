@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* body {
+  background-color: #f8e9ed;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;}
+
+
+.titulo {
+    display: flex;
+    justify-content: center;  /* Centralização Horizontal */
+    align-items: center;      /* Centralização Vertical */
+    width: 50%;               
+    margin: 40px auto 0 auto; /* Margem ajustada */
+    max-width: 600px;         /* Largura máxima */
+    font-size: xx-large;
+    background-color: #8D191C;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 3em;
+}
+
+@media (max-width: 600px) {
+    .titulo {
+        font-size: x-large;  
+        border-radius: 1em;  
+    }
+}
+
+.legenda{
+    display: flex;
+    justify-content: center;  /* Centralização Horizontal */
+    align-items: center;      /* Centralização Vertical */
+    width: 50%;               
+    margin: 40px auto 0 auto; /* Margem ajustada */
+    max-width: 600px;         /* Largura máxima */
+    font-size: large; 
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;  /* Centralização Horizontal */
+    align-items: center;      /* Centralização Vertical */
+    width: 100%;              
+    margin-top: 12%;
+}
+
+img {
+    width: 100%;              /* A imagem será responsiva com base na largura do contêiner */
+    max-width: 600px;         /* Largura máxima */
+    height: auto;             /* Manter proporção da imagem */
+    max-width: 190px;
+}
+
+
+  /*drag*/
+
+
+ /* selecione uma imagem */
+ .selecione {
+    background-color: #8D191C;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffff;
+  
+  }
+  
+  .profile3 {
+    text-align: center;
+    padding: 50px;
+    background-color: transparent;
+    
+  }
+  
+  .selecao{
+    width: 75%;
+    height: 30%;
+    margin-left: 13%;
+    border: 2px dashed rgb(0, 0, 0);
+  }
+  
+  .prox {
+    width: 190px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 10%;
+    background-color: #8D191C;
+    border: none;
+    color: white;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+    cursor: pointer;
+  }
